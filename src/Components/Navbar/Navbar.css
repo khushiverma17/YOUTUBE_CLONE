@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* borderbox means that padding, margin, etc will add to the box size */
+    box-sizing: border-box;
+}
+
+#body{
+    font-family: 'Roboto' sans-serif;
+}
+
+
+.navbar{
+    display: flex;
+    /* used in flexbox layouts to distribute space between the flex items along the main axis of the container. */
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: black; */
+    /* margin-top: 4px; */
+    padding: 11px;
+}
+main{
+    display: flex;
+    height: 100vh;
+    background-color: rgb(237, 236, 236);
+}
+.sidebar{
+    height: 100%;
+    background-color: white;
+    width: 18%;
+    /* to hide scroll bars */
+    overflow: hidden;
+}
+
+@media (max-width: 768px)
+{
+    .sidebar{display: none;}
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+    /* border: 2px solid yellow; */
+}
+.left button{
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+#youtubeimg{
+    height: 52px;
+    margin-left: 11px;
+    width: 119px;
+}
+
+form{
+    display: flex;
+    border: 1px solid gray;
+    height: 45px;
+    border-radius: 67px;
+    width: 711px;
+    background-color: rgb(236, 235, 235);
+    
+}
+
+input{
+    border: none;
+    outline: none;
+    padding-top: 0px;
+    font-size: 20px;
+    padding-left: 19px;
+    border-radius: 67px;
+    width: 636px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.center{
+    display: flex;
+}
+.center button{
+    border: none;
+    border-radius: 67px;
+    margin-left: 23px;
+}
+#micbtn{
+    width: 46px;
+}
+ .center button:hover{
+    cursor: pointer;
+    background-color: rgb(222, 220, 220);
+}
+#searchbtn{
+    width: 73px;
+    margin-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+ .material-icons {
+    color: black(100, 100, 100);
+    padding: 0 7px;
+    cursor: pointer;
+  }
+
+
+  /* styling .sidebar */
+.nav{
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    /* margin: 20px; */
+    /* border: 2px solid orange; */
+    height: 46px;
+    /* background-color: #f3f3f0; */
+    border-radius: 12px;
+    font-size: 19px;
+    padding-top: 4px;
+    width: 81%;
+    margin-left: 12px;
+}
+.nav a:hover{
+    
+    background-color: #f3f3f0;
+}
+.navlink span{
+    margin-left: 10px;
+}
+.sidebaricons{
+    margin-left: 8px;
+    font-size: 100px;
+    /* background-color: aqua; */
+    padding-top: 5px;
+}
