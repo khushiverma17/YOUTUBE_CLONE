@@ -16,6 +16,21 @@
     box-sizing: border-box;
 }
 
+.nav::-webkit-scrollbar {
+    display: none;
+}
+.nav:hover::-webkit-scrollbar {
+    display: block;
+}
+.nav::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+    background-color: #ffffff; /* Set the background color of the scrollbar */
+  }
+  .nav:hover::-webkit-scrollbar-thumb{
+    /* display: block; */
+    background:rgb(151, 151, 151);
+  }
+
 .nav a{
     text-decoration: none;
     color: black;
