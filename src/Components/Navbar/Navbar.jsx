@@ -2,13 +2,13 @@ import React from "react";
 import './Navbar.css'
 
 
-const Navbar=()=>{
+const Navbar=({setSidebar})=>{
     return(
         <div id="body">
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
         <nav className="navbar">
         <div className="left">
-            <button  id="menubtn">
+            <button id="menubtn" onClick={()=>setSidebar(prev=>prev===false?true:false)}>
                  <i id="menu" className="material-icons">menu</i>
             </button>
             <img src="https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png" alt="logo" id="youtubeimg"/>

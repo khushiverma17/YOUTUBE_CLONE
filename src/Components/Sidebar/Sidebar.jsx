@@ -1,9 +1,9 @@
 import React from "react";
 import './Sidebar.css'
 
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
     return (
-        <div className="sidebar">
+        <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
             <div className="nav">
                 <div className="topofyouinnav sectionofnav">
@@ -51,7 +51,7 @@ const Sidebar = () => {
                 </div>
             
                 <div className="explore sectionofnav">
-                    <span className="explorepoint">Explore</span>
+                    <span className="explorepoint notbutton">Explore</span>
                     <a href="" className="navlink">
                         <i className="material-icons sidebaricons">local_fire_department</i>
                         <span>Trending</span>
@@ -89,12 +89,45 @@ const Sidebar = () => {
                         <span>Learning</span>
                     </a>
                     <a href="" className="navlink">
-                        <i className="material-icons sidebaricons">self_care</i>
-                        <span>Fashion</span>
+                        <i className="material-icons sidebaricons">podcasts</i>
+                        <span>Podcasts</span>
+                    </a>
+                </div>
+                <div className="morefromyoutube sectionofnav">
+                    <span className="moreFromYoutube notbutton">More from YouTube</span>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">feed</i>
+                        <span>YouTube Premium</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">emoji_events</i>
+                        <span>YouTube Studio</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">emoji_objects</i>
+                        <span>YouTube Music</span>
                     </a>
                     <a href="" className="navlink">
                         <i className="material-icons sidebaricons">podcasts</i>
-                        <span>Podcasts</span>
+                        <span>YouTube Kids</span>
+                    </a>
+                </div>
+                <div className="settingsandall sectionofnav">
+                <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">settings</i>
+                        <span>Settings</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">flag</i>
+                        <span>Report History</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">help</i>
+                        <span>Help</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">chat</i>
+                        <span>Send Feedback</span>
                     </a>
                 </div>
             </div>
