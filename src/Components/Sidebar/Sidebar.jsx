@@ -1,8 +1,8 @@
 import React from "react";
 import './Sidebar.css'
 
-const Sidebar=()=>{
-    return(
+const Sidebar = () => {
+    return (
         <div className="sidebar">
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
             <div className="nav">
@@ -21,6 +21,9 @@ const Sidebar=()=>{
                     </a>
                 </div>
                 <div className="youinnav sectionofnav">
+                    <a href="" className="navlink sidebar-no-icons"><span>You</span>
+                        <i className="material-icons sidebar-no-icon">chevron_right</i>
+                    </a>
                     <a href="" className="navlink">
                         <i className="material-icons sidebaricons">account_box</i>
                         <span>Your Channel</span>
@@ -45,8 +48,55 @@ const Sidebar=()=>{
                         <i className="material-icons sidebaricons">thumb_up</i>
                         <span>Liked Videos</span>
                     </a>
-                    </div>
-
+                </div>
+            
+                <div className="explore sectionofnav">
+                    <span className="explorepoint">Explore</span>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">local_fire_department</i>
+                        <span>Trending</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">shopping_bag</i>
+                        <span>Shopping</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">music_note</i>
+                        <span>Music</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">theaters</i>
+                        <span>Movies</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">stream</i>
+                        <span>Live</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">sports_esports</i>
+                        <span>Gaming</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">feed</i>
+                        <span>News</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">emoji_events</i>
+                        <span>Sports</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">emoji_objects</i>
+                        <span>Learning</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">self_care</i>
+                        <span>Fashion</span>
+                    </a>
+                    <a href="" className="navlink">
+                        <i className="material-icons sidebaricons">podcasts</i>
+                        <span>Podcasts</span>
+                    </a>
+                </div>
             </div>
         </div>
     )

@@ -1,15 +1,19 @@
 .sidebar{
     font-family: 'Roboto', sans-serif;
+    width: 16%;
+    /* background-color: orange; */
 }
 
 
 
 .nav{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
-    height: 100vh;
-
+    /* height: 100vh; */
+    overflow: scroll;
+    background-color: purple;
+    box-sizing: border-box;
 }
 
 .nav a{
@@ -22,8 +26,8 @@
     border-radius: 12px;
     font-size: 14px;
     padding-top: 4px;
-    width: 81%;
-    margin-left: 12px;
+    width: 100%;
+    margin-left: 0px;
 }
 .nav a:hover{
     
@@ -43,10 +47,39 @@
 .sectionofnav{
     display: flex;
     flex-direction: column;
+    width: 86%;
+    left: 9px;
+    position: relative;
+
+    border-bottom: 1px solid rgb(183, 182, 182);
 }
 .topofyouinnav{
-    background-color: yellow;
+    /* background-color: yellow; */
+    padding-bottom: 5px;
 }
 .youinnav{
-    background-color: red;
+    padding-top: 5px;
+    padding-bottom: 13px;
+}
+.sidebar-no-icons{
+    /* border: 2px solid blue; */
+    font-size: 16px;
+    padding-left: 5px;
+}
+.sidebar-no-icon{
+    position: relative;
+    top: 6px;
+    left: 0px;
+}
+
+.explorepoint{
+    padding-top: 5px;
+    position: relative;
+    left: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 64px;
+    margin-bottom: 17px;
+    height: 27px;
+    top: 19px;
 }
