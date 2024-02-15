@@ -84,3 +84,22 @@
     top: 19px;
     /* background-color: blanchedalmond; */
 }
+.small-sidebar{
+    width: 5%;
+}
+.small-sidebar span{
+    display: none;
+}
+.small-sidebar .sidebar-no-icons{
+    display: none;
+}
+.small-sidebar a{
+    display: none;
+}
+.small-sidebar .toshowsidee{
+    display: none;
+    display:inline;
+} 
+.small-sidebar .sectionofnav{
+    border-bottom:none;
+}

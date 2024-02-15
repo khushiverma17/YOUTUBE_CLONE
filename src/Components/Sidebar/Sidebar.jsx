@@ -7,24 +7,24 @@ const Sidebar = ({sidebar}) => {
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
             <div className="nav">
                 <div className="topofyouinnav sectionofnav">
-                    <a href="" className="navlink">
+                    <a href="" className="navlink toshowsidee">
                         <i className="material-icons sidebaricons">home</i>
                         <span>Home</span>
                     </a>
-                    <a href="" className="navlink">
+                    <a href="" className="navlink toshowsidee">
                         <i className="material-icons sidebaricons">slow_motion_video</i>
                         <span>Shorts</span>
                     </a>
-                    <a href="" className="navlink">
+                    <a href="" className="navlink toshowsidee">
                         <i className="material-icons sidebaricons">subscriptions</i>
-                        <span>Subscriptions</span>
+                        <span>Subscriptions</span>  
                     </a>
                 </div>
                 <div className="youinnav sectionofnav">
                     <a href="" className="navlink sidebar-no-icons"><span>You</span>
                         <i className="material-icons sidebar-no-icon">chevron_right</i>
                     </a>
-                    <a href="" className="navlink">
+                    <a href="" className="navlink toshowsidee">
                         <i className="material-icons sidebaricons">account_box</i>
                         <span>Your Channel</span>
                     </a>
@@ -40,7 +40,7 @@ const Sidebar = ({sidebar}) => {
                         <i className="material-icons sidebaricons">timelapse</i>
                         <span>Watch Later</span>
                     </a>
-                    <a href="" className="navlink">
+                    <a href="" className="navlink toshowsidee">
                         <i className="material-icons sidebaricons">download</i>
                         <span>Downloads</span>
                     </a>
