@@ -3,6 +3,8 @@ import './Sidebar.css'
 
 const Sidebar = ({sidebar}) => {
     return (
+        // here we are providing two classname to div => first one is sidebar and second is variable
+        //which works according to the current value of sidebar
         <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
             <div className="nav">

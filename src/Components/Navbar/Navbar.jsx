@@ -8,6 +8,7 @@ const Navbar=({setSidebar})=>{
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
         <nav className="navbar">
         <div className="left">
+            {/* here prev is the argument */}
             <button id="menubtn" onClick={()=>setSidebar(prev=>prev===false?true:false)}>
                  <i id="menu" className="material-icons">menu</i>
             </button>

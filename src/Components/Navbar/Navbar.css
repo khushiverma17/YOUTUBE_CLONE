@@ -18,6 +18,7 @@
     /* background-color: black; */
     /* margin-top: 4px; */
     padding: 11px;
+    position: static;
 }
 main{
     display: flex;
