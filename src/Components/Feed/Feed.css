@@ -1,0 +1,26 @@
+
+
+.card img{
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.container .feed{
+    /* border: 20px solid brown; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.large-container .feed img{
+    height: 190px;
+}
+.large-container .feed{
+    /* border: 1px solid red; */
+    grid-template-columns: repeat(auto-fit, minmax(279px, 1fr));
+}
+.feed{
+    
+    display: grid;
+    grid-column-gap: 11px;
+    grid-row-gap: 30px;
+    margin-top: 15px;
+}

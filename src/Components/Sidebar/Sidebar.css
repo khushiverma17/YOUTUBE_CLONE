@@ -1,7 +1,13 @@
 .sidebar{
     font-family: 'Roboto', sans-serif;
     width: 16%;
+    position: fixed;
+    /* position: inherit; */
+    /* display: flex; */
     /* background-color: orange; */
+    z-index: 200;
+    top: 107px;
+    overflow-y: auto;
 }
 
 
@@ -10,26 +16,19 @@
     /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
-    overflow: scroll;
-    /* background-color: purple; */
     box-sizing: border-box;
+    position: relative;
+    z-index: 2;
 }
 
 .nav::-webkit-scrollbar {
     display: none;
+    background-color: red;
 }
 .nav:hover::-webkit-scrollbar {
     display: block;
 }
-.nav::-webkit-scrollbar {
-    width: 8px; /* Set the width of the scrollbar */
-    background-color: #ffffff; /* Set the background color of the scrollbar */
-  }
-  .nav:hover::-webkit-scrollbar-thumb{
-    /* display: block; */
-    background:rgb(151, 151, 151);
-  }
+
 
 .nav a{
     text-decoration: none;
@@ -101,6 +100,7 @@
 }
 .small-sidebar{
     width: 5%;
+    overflow: hidden;
 }
 .small-sidebar span{
     display: none;

@@ -7,6 +7,7 @@
 
 #body{
     font-family: 'Roboto' sans-serif;
+    overflow-y: scroll;
 }
 
 
@@ -18,7 +19,10 @@
     /* background-color: black; */
     /* margin-top: 4px; */
     padding: 11px;
-    position: static;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
 }
 main{
     display: flex;
