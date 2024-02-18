@@ -7,7 +7,8 @@
     /* background-color: orange; */
     z-index: 200;
     top: 107px;
-    overflow-y: auto;
+    /* overflow-y: overlay; */
+    overflow: scroll;
 }
 
 
@@ -21,11 +22,20 @@
     z-index: 2;
 }
 
-.nav::-webkit-scrollbar {
-    display: none;
-    background-color: red;
+.sidebar::-webkit-scrollbar {
+    /* display: none; */
+    background-color: white;
+    width:8px;
 }
-.nav:hover::-webkit-scrollbar {
+
+
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #b1b1b1; /* Change this to the color you want */
+    display: none;
+    
+} 
+.sidebar:hover::-webkit-scrollbar-thumb{
     display: block;
 }
 
