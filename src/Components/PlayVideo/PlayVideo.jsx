@@ -3,7 +3,7 @@ import './PlayVideo.css'
 const PlayVideo=()=>{
     return(
         <div className="play-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bj_xaltfmEU?si=4sFPWF26fd07swnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Bj_xaltfmEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <h3>Best youtube channel you have landed on</h3>
             <div className="play-video-info">
                 <p>1234 Views &bull; 2days ago</p>

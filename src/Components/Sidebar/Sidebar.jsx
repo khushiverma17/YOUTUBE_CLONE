@@ -1,7 +1,7 @@
 import React from "react";
 import './Sidebar.css'
 
-const Sidebar = ({sidebar}) => {
+const Sidebar = ({sidebar,category,setCategory}) => {
     return (
         // here we are providing two classname to div => first one is sidebar and second is variable
         //which works according to the current value of sidebar
