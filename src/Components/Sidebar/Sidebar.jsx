@@ -1,6 +1,8 @@
 import React from "react";
 import './Sidebar.css'
 
+
+// ({sidebar, category, setCategory}): This is the destructuring of props in the parameter list of the function. It means that the function expects an object with properties sidebar, category, and setCategory.
 const Sidebar = ({sidebar,category,setCategory}) => {
     return (
         // here we are providing two classname to div => first one is sidebar and second is variable
