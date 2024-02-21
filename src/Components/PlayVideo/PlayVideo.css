@@ -24,6 +24,7 @@
 }
 .video-material-icons{
     color: black;
+    margin-left: 4px;
 }
 .play-video-info span{
     display: inline-flex;
@@ -55,6 +56,10 @@
     width: 290px;
     /* border: 2px solid red; */
     margin-left: 265px;
+}
+.hit-react{
+    position: relative;
+    bottom: 7px;
 }
 .publisher img{
     width: 40px;

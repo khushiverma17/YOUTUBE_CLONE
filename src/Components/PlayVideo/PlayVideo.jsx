@@ -19,10 +19,10 @@ const PlayVideo=()=>{
                 </div>
                 <button>Subscribe</button>
                 <div id="channelinforeact">
-                    <span><i className="material-icons video-material-icons">thumb_up</i>234</span>
-                    <span><i className="material-icons video-material-icons">thumb_down</i>23</span>
-                    <span><i className="material-icons video-material-icons">share</i>Like</span>
-                    <span><i className="material-icons video-material-icons">download</i>Dislike</span>
+                    <span><i className="material-icons video-material-icons">thumb_up</i><span class="hit-react">234</span></span>
+                    <span><i className="material-icons video-material-icons">thumb_down</i><span class="hit-react">23</span></span>
+                    <span><i className="material-icons video-material-icons">share</i><span class="hit-react">Like</span></span>
+                    <span><i className="material-icons video-material-icons">download</i><span class="hit-react">Dislike</span></span>
                 </div>
             </div>
             <div className="vid-description">
