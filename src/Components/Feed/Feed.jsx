@@ -48,8 +48,10 @@ import { Link } from 'react-router-dom';
 // import {API_KEY} from '../../../myData.env'
 import { valueConvertor } from '../../data';
 import moment from 'moment';
+const API_KEY = import.meta.env.VITE_API_KEY;
 
-const API_KEY=process.env.API_key
+
+
 
 const Feed = ({ category }) => {
     const [data, setData] = useState([]);
