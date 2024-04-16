@@ -5,6 +5,7 @@ import Feed from '../../Components/Feed/Feed'
 
 const Home=({sidebar})=>{
     
+    // here category is a variable name and setCategory is the function to modify category variable
     const [category,setCategory]=useState(0);
 
     return (

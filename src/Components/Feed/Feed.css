@@ -6,6 +6,12 @@
     object-fit: cover;
     border-radius: 11px;
 }
+.card{
+    text-decoration: none;
+}
+.viewandday{
+    color: #555;
+}
 
 .container .feed{
     /* border: 20px solid brown; */

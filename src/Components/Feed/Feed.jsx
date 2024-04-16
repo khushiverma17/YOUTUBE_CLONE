@@ -1,111 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Feed.css';
 import { Link } from 'react-router-dom';
+import { API_KEY, valueConvertor } from '../../data'
+import moment from 'moment';
 
 
-const Feed=()=>{
-    return(
+
+const Feed = ({ category }) => {
+    const [data, setData] = useState([]);
+    const fetchData = async () => {
+        const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
+        await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items));
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, [category])
+
+
+    return (
         <div className="feed">
-            {/* <div className="card"> */}
-                <Link to={`video/20/4567`} className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            {/* </div> */}
-            </Link>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
-            <div className="card">
-                <img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="" />
-                <h2>Best channel</h2>
-                {/* channel name */}
-                <h3>My channel</h3>
-                <p>15k views &bull; 2 days ago</p>
-            </div>
+            {data.map((item, index) => {
+                return (
+                    <Link to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+                        <img src={item.snippet.thumbnails.medium.url}alt="" />
+                        <h2>{item.snippet.title}</h2>
+                        {/* channel name */}
+                        <h3>{item.snippet.channelTitle}</h3>
+                        <p className='viewandday'>{valueConvertor(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+                        {/* </div> */}
+                    </Link>
+                )
+            })}
+
+
         </div>
     )
 }
