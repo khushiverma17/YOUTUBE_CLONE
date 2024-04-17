@@ -10,9 +10,12 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 
 const Feed = ({ category }) => {
     const [data, setData] = useState([]);
+
     const fetchData = async () => {
+        // console.log("category fethc is " + category);
         const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
-        await fetch(videoList_url).then(response => response.json()).then(data => setData(data.items));
+        await fetch(videoList_url).then(response => response.json()).then(data => {setData(data.items); console.log(data)});
+        // console.log(data);
     }
 
     useEffect(() => {
@@ -23,7 +26,8 @@ const Feed = ({ category }) => {
 
     return (
         <div className="feed">
-            {data.map((item, index) => {
+            {data ? 
+            (data.map((item, index) => {
                 return (
                     <Link key={item.id} to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
                         <img src={item.snippet.thumbnails.medium.url}alt="" />
@@ -34,7 +38,7 @@ const Feed = ({ category }) => {
                         {/* </div> */}
                     </Link>
                 )
-            })}
+            })) : <p>LOading</p>}
 
 
         </div>
@@ -42,4 +46,3 @@ const Feed = ({ category }) => {
 }
 
 export default Feed;
-

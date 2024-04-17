@@ -2,19 +2,14 @@
     font-family: 'Roboto', sans-serif;
     width: 16%;
     position: fixed;
-    /* position: inherit; */
-    /* display: flex; */
-    /* background-color: orange; */
     z-index: 200;
     top: 107px;
-    /* overflow-y: overlay; */
     overflow: scroll;
 }
 
 
 
 .nav{
-    /* border: 2px solid green; */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -23,7 +18,6 @@
 }
 
 .sidebar::-webkit-scrollbar {
-    /* display: none; */
     background-color: white;
     width:8px;
 }
@@ -31,7 +25,7 @@
 
 
 .sidebar::-webkit-scrollbar-thumb {
-    background: #b1b1b1; /* Change this to the color you want */
+    background: #b1b1b1; 
     display: none;
     
 } 
@@ -43,10 +37,7 @@
 .nav a{
     text-decoration: none;
     color: black;
-    /* margin: 20px; */
-    /* border: 2px solid orange; */
     height: 46px;
-    /* background-color: #f3f3f0; */
     border-radius: 12px;
     font-size: 14px;
     padding-top: 4px;
@@ -63,7 +54,6 @@
 .sidebaricons{
     margin-left: 8px;
     font-size: 100px;
-    /* background-color: aqua; */
     padding-top: 5px;
     position: relative;
     top: 6px;
@@ -75,10 +65,9 @@
     left: 9px;
     position: relative;
 
-    border-bottom: 1px solid rgb(183, 182, 182);
+    /* border-bottom: 1px solid rgb(183, 182, 182); */
 }
 .topofyouinnav{
-    /* background-color: yellow; */
     padding-bottom: 5px;
 }
 .youinnav{
@@ -86,7 +75,6 @@
     padding-bottom: 13px;
 }
 .sidebar-no-icons{
-    /* border: 2px solid blue; */
     font-size: 16px;
     padding-left: 5px;
 }
@@ -102,11 +90,9 @@
     left: 14px;
     font-size: 16px;
     font-weight: 600;
-    /* width: 64px; */
     margin-bottom: 17px;
     height: 27px;
     top: 19px;
-    /* background-color: blanchedalmond; */
 }
 .small-sidebar{
     width: 5%;
@@ -115,28 +101,23 @@
 .small-sidebar span{
     display: none;
 }
-.small-sidebar .sidebar-no-icons{
-    display: none;
-}
-.small-sidebar a{
-    display: none;
-}
-.small-sidebar .toshowsidee{
-    display: none;
-    display:inline;
-} 
+
+
 .small-sidebar .sectionofnav{
     border-bottom:none;
 }
 
-/* .side-link.active sidebaricons{
-    color: blue;
-} */
-/* .side-link{
-    background-color: yellow;
-} */
-/* .side-link.active i{
-    background-color: yellow;
-    padding-bottom: 2px;
-    border-bottom: 2px solid red;
-} */
+
+
+
+/* 
+
+ .sidebar{
+    background-color: #fff;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+ } */

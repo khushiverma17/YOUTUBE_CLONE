@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import './PlayVideo.css'
-const PlayVideo=()=>{
+const PlayVideo=({videoId})=>{
+
+
+
     return(
         <div className="play-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/9xm5XmHCkMU?si=pB6v5wFvir-5U-Sp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            {/* width="560" height="315"  */}
+            <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}  frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay; picture-in-picture; web-share" allowfullscreen></iframe>
             <h3>Best youtube channel you have landed on</h3>
-            {/* <div className="play-video-info">
-                {/* <p>1234 Views &bull; 2days ago</p> */}
-                
-            {/* </div> */} 
             <hr />
             <div className="publisher">
             

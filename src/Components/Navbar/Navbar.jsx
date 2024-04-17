@@ -1,5 +1,6 @@
 import React from "react";
 import './Navbar.css'
+import { Link } from "react-router-dom";
 
 
 const Navbar=({setSidebar})=>{
@@ -12,7 +13,9 @@ const Navbar=({setSidebar})=>{
             <button id="menubtn" onClick={()=>setSidebar(prev=>prev===false?true:false)}>
                  <i id="menu" className="material-icons">menu</i>
             </button>
-            <img src="https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png" alt="logo" id="youtubeimg"/>
+            <Link to="/">
+                <img src="https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png" alt="logo" id="youtubeimg"/>
+            </Link>
         </div>
 
         <div className="center">
