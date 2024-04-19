@@ -4,7 +4,7 @@
     position: fixed;
     z-index: 200;
     top: 107px;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 
@@ -17,21 +17,21 @@
     z-index: 2;
 }
 
-.sidebar::-webkit-scrollbar {
+/* .sidebar::-webkit-scrollbar {
     background-color: white;
     width:8px;
-}
+} */
 
 
 
-.sidebar::-webkit-scrollbar-thumb {
+/* .sidebar::-webkit-scrollbar-thumb {
     background: #b1b1b1; 
     display: none;
     
-} 
-.sidebar:hover::-webkit-scrollbar-thumb{
+}  */
+/* .sidebar:hover::-webkit-scrollbar-thumb{
     display: block;
-}
+} */
 
 
 .nav a{
@@ -108,3 +108,16 @@
 }
 
 
+@media (max-width:900px){
+    .sidebar{
+        display: none;
+    }
+     
+}
+
+.dark{
+    background-color: #171b1e !important;
+    /* color: whitesmoke !important; */
+    color: rgb(164, 162, 162) !important;
+
+}

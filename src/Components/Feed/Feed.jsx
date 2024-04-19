@@ -3,12 +3,15 @@ import './Feed.css';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import {valueConvertor} from '../../data'
+import { useSelector } from 'react-redux';
+
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 
 
 const Feed = ({ category }) => {
+    const lightTheme=useSelector(state=>state.themeKey);
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
@@ -25,20 +28,20 @@ const Feed = ({ category }) => {
 
 
     return (
-        <div className="feed">
+        <div className={"feed" + ((lightTheme)?"" : " dark")}>
             {data ? 
             (data.map((item, index) => {
                 return (
-                    <Link key={item.id} to={`video/${item.snippet.categoryId}/${item.id}`} className="card">
+                    <Link key={item.id} to={`video/${item.snippet.categoryId}/${item.id}`} className={"card" + ((lightTheme)?"" : " dark")}>
                         <img src={item.snippet.thumbnails.medium.url}alt="" />
-                        <h2>{item.snippet.title}</h2>
+                        <h2 className={(lightTheme)?"" : " whitedark"}>{item.snippet.title}</h2>
                         {/* channel name */}
                         <h3>{item.snippet.channelTitle}</h3>
-                        <p className='viewandday'>{valueConvertor(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
+                        <p className={"viewandday" + ((lightTheme)?"" : " dark")}>{valueConvertor(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
                         {/* </div> */}
                     </Link>
                 )
-            })) : <p>LOading</p>}
+            })) : <p>Loading</p>}
 
 
         </div>

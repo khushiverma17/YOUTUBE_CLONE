@@ -55,8 +55,8 @@ main{
 }
 #youtubeimg{
     height: 52px;
-    margin-left: 11px;
-    width: 119px;
+    margin-left: 24px;
+    width: 55px;
 }
 
 form{
@@ -145,3 +145,26 @@ input{
 }
 
 
+@media (max-width:900px){
+    #menubtn{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .right>.display-this{
+        display: block;
+        width: 30px;
+    }
+    #youtubeimg{
+        width: 90px;
+    }
+     .center form{
+        width: 400px;
+    }
+}
+
+.darkvoice{
+    background-color: rgb(39, 38, 38) !important;
+    color: rgb(164, 162, 162) !important;
+}

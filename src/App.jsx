@@ -4,13 +4,15 @@ import Home from './Pages/Home/Home'
 import Video from './Pages/Video/Video'
 import Sidebar from './Components/Sidebar/Sidebar'
 import { Routes, Route } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const App = () => {
+  const lightTheme=useSelector(state=>state.themeKey);
   // creating a state variable This line of code initializes a state variable named sidebar and a function setSidebar to update the value of sidebar. The initial value of sidebar is set to true. This code is commonly used in React to manage state within functional components.
   //initial value is provided to be true
   const [sidebar,setSidebar]=useState(true);
   return (
-    <div>
+    <div className={"App" + ((lightTheme)?"" : " dark")}>
        {/* rendering a Navbar component passing setSidebar as a prop. */}
        {/* setSidebar={setSidebar} means creating a prop =>they are like attributes */}
        {/* props are used to send data from parent to child */}

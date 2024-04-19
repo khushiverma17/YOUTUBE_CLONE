@@ -3,6 +3,7 @@ import './PlayVideo.css'
 import { valueConvertor } from "../../data";
 import moment from "moment";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 
@@ -11,6 +12,7 @@ const PlayVideo = () => {
     const [apiData, setApiData] = useState(null);
     const [channelData, setChannelData] = useState(null);
     const [commentData, setCommentData] = useState([]);
+    const lightTheme=useSelector(state=>state.themeKey);
 
 
 
@@ -44,44 +46,44 @@ const PlayVideo = () => {
 
 
     return (
-        <div className="play-video">
+        <div className={"play-video" + ((lightTheme)?"" : " dark")}>
             {/* width="560" height="315"  */}
             <iframe width="560" height="315" src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; autoplay; picture-in-picture; web-share" allowfullscreen></iframe>
-            <h3>{apiData ? apiData.snippet.title : "Title Here"}</h3>
+            <h3 className={(lightTheme)?"" : " darkwhite"}>{apiData ? apiData.snippet.title : "Title Here"}</h3>
             <br />
             <p>{apiData ? valueConvertor(apiData.statistics.viewCount) : "16K"} views &bull; {apiData ? moment(apiData.snippet.publishedAt).fromNow() : "2"}</p>
             <hr />
-            <div className="publisher">
+            <div className={"publisher" + ((lightTheme)?"" : " dark")}>
 
                 <img src={channelData ? channelData.snippet.thumbnails.default.url : ""} alt="" />
                 <div id="channelinfo">
-                    <p>{apiData ? apiData.snippet.channelTitle : "Channel Name here"}</p>
+                    <p className={(lightTheme)?"" : " darkwhite"}>{apiData ? apiData.snippet.channelTitle : "Channel Name here"}</p>
                     <span>{channelData ? valueConvertor(channelData.statistics.subscriberCount) : "1M"} Subscribers</span>
                 </div>
                 <button>Subscribe</button>
                 <div id="channelinforeact">
-                    <span><i className="material-icons video-material-icons">thumb_up</i><span class="hit-react">{apiData ? valueConvertor(apiData.statistics.likeCount) : "20"}</span></span>
+                    <span><i className="material-icons">thumb_up</i><span class="hit-react">{apiData ? valueConvertor(apiData.statistics.likeCount) : "20"}</span></span>
                     {" "}
-                    <span><i className="material-icons video-material-icons">thumb_down</i></span>
-                    <span><i className="material-icons video-material-icons">share</i></span>
-                    <span><i className="material-icons video-material-icons">download</i></span>
+                    <span><i className="material-icons">thumb_down</i></span>
+                    <span><i className="material-icons">share</i></span>
+                    <span><i className="material-icons">download</i></span>
                 </div>
             </div>
-            <div className="vid-description">
-                <p>{apiData ? apiData.snippet.localized.description.slice(0, 250) : "Description here"}</p>
+            <div className={"vid-description" + ((lightTheme)?"" : " dark")}>
+                <p className={(lightTheme)?"" : " darkwhite"}>{apiData ? apiData.snippet.localized.description.slice(0, 250) : "Description here"}</p>
 
                 <hr />
                 <h4>{apiData ? valueConvertor(apiData.statistics.commentCount) : "10"} comments</h4>
                 {commentData.map((item, index) => {
                     return (
-                        <div key={index} className="comment">
+                        <div key={index} className={"comment" + ((lightTheme)?"" : " dark")}>
                             <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="" />
                             <div>
-                                <h3>{item.snippet.topLevelComment.snippet.authorDisplayName}<span>{moment(item.snippet.topLevelComment.snippet.publishedAt).fromNow()}</span></h3>
+                                <h3 className={(lightTheme)?"" : " darkwhite"}>{item.snippet.topLevelComment.snippet.authorDisplayName}<span>{moment(item.snippet.topLevelComment.snippet.publishedAt).fromNow()}</span></h3>
                                 <p>{item.snippet.topLevelComment.snippet.textDisplay.slice(0, 300)}</p>
-                                <div className="comment-action">
+                                <div className={"comment-action" + ((lightTheme)?"" : " dark")}>
                                     <i className="material-icons">thumb_up</i>
-                                    <span className="likecomment">{valueConvertor(item.snippet.topLevelComment.snippet.likeCount)}</span>
+                                    <span className={"likecomment" + ((lightTheme)?"" : " dark")}>{valueConvertor(item.snippet.topLevelComment.snippet.likeCount)}</span>
                                     <i className="material-icons">thumb_down</i>
                                 </div>
                             </div>
