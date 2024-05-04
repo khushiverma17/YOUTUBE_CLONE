@@ -8,23 +8,14 @@ import { useSelector } from "react-redux";
     const Sidebar = ({sidebar,category,setCategory}) => {
         const lightTheme=useSelector(state=>state.themeKey);
         return (
-        // here we are providing two classname to div => first one is sidebar and second is variable
-        //which works according to the current value of sidebar
         <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
             <div className={"nav" + ((lightTheme)?"" : " dark")}>
-                {/* <div className={"topofyouinnav sectionofnav" + ((lightTheme)?"" : " dark")}> */}
                     
                     <a  className={`side-link ${category === 0 ? "active" : ""} ${(lightTheme ? "" : " dark")}`}  onClick={(e) => { e.preventDefault(); setCategory(0); }}>
                         <i className="material-icons sidebaricons">home</i>
                         <span>Home</span>
                     </a>
-                   
-                {/* </div> */}
-                   
-            
-                {/* <div className={"explore sectionofnav" + ((lightTheme)?"" : " dark darki")}> */}
-                    
                     <a href="" className={`side-link ${category === 10 ? "active" : ""} ${(lightTheme ? "" : " dark")}`} onClick={(e) => { e.preventDefault(); setCategory(10); }}>
                         <i className="material-icons sidebaricons">music_note</i>
                         <span>Music</span>
@@ -51,7 +42,6 @@ import { useSelector } from "react-redux";
                         <span>Science</span>
                     </a>
                    
-                {/* </div> */}
                 
                 
             </div>

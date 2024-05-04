@@ -35,10 +35,8 @@ const Feed = ({ category }) => {
                     <Link key={item.id} to={`video/${item.snippet.categoryId}/${item.id}`} className={"card" + ((lightTheme)?"" : " dark")}>
                         <img src={item.snippet.thumbnails.medium.url}alt="" />
                         <h2 className={(lightTheme)?"" : " whitedark"}>{item.snippet.title}</h2>
-                        {/* channel name */}
                         <h3>{item.snippet.channelTitle}</h3>
                         <p className={"viewandday" + ((lightTheme)?"" : " dark")}>{valueConvertor(item.statistics.viewCount)} views &bull; {moment(item.snippet.publishedAt).fromNow()}</p>
-                        {/* </div> */}
                     </Link>
                 )
             })) : <p>Loading</p>}
