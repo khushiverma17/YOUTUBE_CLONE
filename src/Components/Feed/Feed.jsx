@@ -15,7 +15,7 @@ const Feed = ({ category }) => {
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
-        // console.log("category fethc is " + category);
+        // console.log("category is " + category);
         const videoList_url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${category}&key=${API_KEY}`
         await fetch(videoList_url).then(response => response.json()).then(data => {setData(data.items); console.log(data)});
         // console.log(data);
